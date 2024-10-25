@@ -49,7 +49,7 @@ const DomainService: ServiceSchema<DomainSettings> = {
 		hello: {
 			rest: {
 				method: "GET",
-				path: "/domain",
+				path: "/",
 			},
             params: DomainValidator.GET_DOMAIN,
 			async handler(this: DomainThis, ctx: Context<IDomain.GetDomainQueryParams, IDomain.DomainMeta>): Promise<any> {
