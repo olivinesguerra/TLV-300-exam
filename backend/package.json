@@ -45,7 +45,8 @@
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "moleculer": "^0.14.27",
-    "moleculer-web": "^0.10.5"
+    "moleculer-web": "^0.10.5",
+    "moment": "^2.30.1"
   },
   "engines": {
     "node": ">= 16.x.x"

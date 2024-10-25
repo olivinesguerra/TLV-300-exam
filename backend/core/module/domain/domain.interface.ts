@@ -5,5 +5,6 @@ export interface GetDomainQueryParams extends Omit<Params, "body" | "query" | "p
     query: { 
         domain: string,
         type: string,
+        requested_data: string
     }
 };
