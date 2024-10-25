@@ -22,6 +22,15 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 		// Global Express middlewares. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Middlewares
 		use: [],
 
+		cors: {
+			origin: ["*"],
+			methods: ["GET", "OPTIONS", "POST", "PUT", "DELETE"],
+			allowedHeaders: ["*"],
+			exposedHeaders: [],
+			credentials: true,
+			maxAge: 3600,
+		},
+
 		routes: [
 			{
 				path: "/api",
