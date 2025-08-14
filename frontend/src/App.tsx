@@ -78,7 +78,7 @@ function App() {
                   <td>{data?.expiration_date}</td>
                   <td>{data?.registrar}</td>
                   <td>{data?.registration_date}</td>
-                  <td>{data?.host_names.join(', ')}</td>
+                  <td className='text-ellipsis'>{data?.host_names.join(', ')}</td>
                 </tr>
               </table>
               : 
