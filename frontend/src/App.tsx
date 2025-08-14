@@ -63,21 +63,39 @@ function App() {
           <div className='flex flex-col p-[20px]'>
             {
               option?.value === "domain_information" ? 
-                <div className='flex-col'>
-                  <div className=''>{data?.domain_age}</div>
-                  <div className=''>{data?.domain_name}</div>
-                  <div className=''>{data?.expiration_date}</div>
-                  <div className=''>{data?.registrar}</div>
-                  <div className=''>{data?.registration_date}</div>
-                  <div className=''>{data?.host_names.join(', ')}</div>
-                </div> 
+              <table>
+                <tr>
+                  <th>Domain Age</th>
+                  <th>Domain Name</th>
+                  <th>Expiration Date</th>
+                  <th>Registrar</th>
+                  <th>Registration Date</th>
+                  <th>Registration Host Names</th>
+                </tr>
+                <tr>
+                  <td>{data?.domain_age}</td>
+                  <td>{data?.domain_name}</td>
+                  <td>{data?.expiration_date}</td>
+                  <td>{data?.registrar}</td>
+                  <td>{data?.registration_date}</td>
+                  <td>{data?.host_names.join(', ')}</td>
+                </tr>
+              </table>
               : 
-              <div className='flex-col'>
-                <div className=''>{data?.administrative_contact_name}</div>
-                <div className=''>{data?.contact_email}</div>
-                <div className=''>{data?.registrant_name}</div>
-                <div className=''>{data?.technical_contact_name}</div>
-              </div> 
+              <table>
+                <tr>
+                  <th>Administrative Contact_ Name</th>
+                  <th>Contact Email</th>
+                  <th>Registrant Name</th>
+                  <th>Technical Contactame</th>
+                </tr>
+                <tr>
+                  <td>{data?.administrative_contact_name}</td>
+                  <td>{data?.contact_email}</td>
+                  <td>{data?.registrant_name}</td>
+                  <td>{data?.technical_contact_name}</td>
+                </tr>
+              </table>
             }
           </div> 
         : null
